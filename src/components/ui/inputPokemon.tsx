@@ -13,7 +13,7 @@ const InputPokemon: React.FC = () => {
 
 	// Função para lidar com o evento de pesquisa
 	const handleSearch = () => {
-		dispatch(searchPokemonByName({ name: query }) as any)
+		dispatch(searchPokemonByName({ name: query.toLocaleLowerCase() }) as any)
 	}
 
 	// Função para lidar com o evento de pressionar tecla
